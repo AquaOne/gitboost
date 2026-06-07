@@ -3,3 +3,8 @@ npm-debug.log*
 *.zip
 .DS_Store
 Thumbs.db
+_gum*/
+_gum*
+_gb/
+_chrome_profile/
+_temp_chrome_profile/
