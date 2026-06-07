@@ -1,0 +1,13 @@
+{
+  "name": "gitboost",
+  "version": "1.0.0",
+  "description": "GitHub Enhancement Suite - Chrome Extension",
+  "private": true,
+  "scripts": {
+    "generate-icons": "node icons/generate-icons.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
+}

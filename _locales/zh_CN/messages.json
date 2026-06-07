@@ -1,0 +1,82 @@
+{
+  "extName": {
+    "message": "GitBoost - GitHub 增强助手",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "为 GitHub 添加 README 目录导航、仓库洞察面板、快捷键等强大功能，提升你的代码浏览体验。",
+    "description": "Extension description"
+  },
+  "cmdOpenIssues": {
+    "message": "打开 Issues 页面",
+    "description": "Keyboard shortcut: open issues page"
+  },
+  "repoInsights": {
+    "message": "仓库洞察",
+    "description": "Panel title for repo insights"
+  },
+  "readmeToc": {
+    "message": "目录",
+    "description": "Table of contents section"
+  },
+  "starsTrend": {
+    "message": "Star 趋势",
+    "description": "Stars trend label"
+  },
+  "recentActivity": {
+    "message": "近期活跃度",
+    "description": "Recent activity label"
+  },
+  "lastCommit": {
+    "message": "最近提交",
+    "description": "Last commit label"
+  },
+  "openIssues": {
+    "message": "未解决 Issues",
+    "description": "Open issues count"
+  },
+  "openPRs": {
+    "message": "进行中 PR",
+    "description": "Open pull requests count"
+  },
+  "settingsTitle": {
+    "message": "GitBoost 设置",
+    "description": "Settings page title"
+  },
+  "enableToc": {
+    "message": "启用 README 目录",
+    "description": "Enable TOC feature"
+  },
+  "enableInsights": {
+    "message": "启用仓库洞察面板",
+    "description": "Enable insights panel"
+  },
+  "enableShortcuts": {
+    "message": "启用快捷键导航",
+    "description": "Enable keyboard shortcuts"
+  },
+  "donate": {
+    "message": "支持我们",
+    "description": "Donate button"
+  },
+  "donateText": {
+    "message": "如果你喜欢 GitBoost，欢迎赞助支持我们持续开发！",
+    "description": "Donation prompt"
+  },
+  "aifadian": {
+    "message": "爱发电赞助",
+    "description": "Aifadian donation"
+  },
+  "githubSponsor": {
+    "message": "GitHub Sponsors",
+    "description": "GitHub Sponsors"
+  },
+  "version": {
+    "message": "版本",
+    "description": "Version label"
+  },
+  "tocToggle": {
+    "message": "目录",
+    "description": "Toggle table of contents"
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitBoost</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="popup-header">
+      <span class="popup-logo">⚡</span>
+      <span class="popup-title">GitBoost</span>
+      <span class="popup-version" id="version"></span>
+    </div>
+
+    <div class="popup-section">
+      <div class="popup-feature">
+        <div class="popup-feature-info">
+          <span class="popup-feature-icon">📑</span>
+          <span class="popup-feature-label" data-i18n="enableToc">README 目录</span>
+        </div>
+        <label class="popup-switch">
+          <input type="checkbox" id="toc-toggle" checked>
+          <span class="popup-slider"></span>
+        </label>
+      </div>
+      <div class="popup-feature">
+        <div class="popup-feature-info">
+          <span class="popup-feature-icon">📊</span>
+          <span class="popup-feature-label" data-i18n="enableInsights">仓库洞察面板</span>
+        </div>
+        <label class="popup-switch">
+          <input type="checkbox" id="insights-toggle" checked>
+          <span class="popup-slider"></span>
+        </label>
+      </div>
+      <div class="popup-feature">
+        <div class="popup-feature-info">
+          <span class="popup-feature-icon">⌨️</span>
+          <span class="popup-feature-label" data-i18n="enableShortcuts">快捷键导航</span>
+        </div>
+        <label class="popup-switch">
+          <input type="checkbox" id="shortcuts-toggle" checked>
+          <span class="popup-slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="popup-actions">
+      <button class="popup-btn popup-btn-secondary" id="settings-btn">
+        ⚙️ <span data-i18n="settingsTitle">设置</span>
+      </button>
+    </div>
+
+    <div class="popup-donate">
+      <div class="popup-donate-text" data-i18n="donateText">
+        如果你喜欢 GitBoost，欢迎赞助支持我们持续开发！
+      </div>
+      <div class="popup-donate-buttons">
+        <a href="https://afdian.com/a/your-username" target="_blank" class="popup-donate-btn">
+          ❤️ <span data-i18n="aifadian">爱发电赞助</span>
+        </a>
+        <a href="https://github.com/sponsors/your-github-username" target="_blank" class="popup-donate-btn popup-donate-btn-gh">
+          💖 <span data-i18n="githubSponsor">GitHub Sponsors</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

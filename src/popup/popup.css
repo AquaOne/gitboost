@@ -1,0 +1,231 @@
+/* GitBoost Popup Styles */
+:root {
+  --bg: #ffffff;
+  --bg-secondary: #f6f8fa;
+  --text: #1f2328;
+  --text-muted: #656d76;
+  --border: #d0d7de;
+  --accent: #6e40c9;
+  --accent-hover: #5a32a3;
+  --success: #2da44e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --bg-secondary: #161b22;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --border: #30363d;
+    --accent: #8957e5;
+    --accent-hover: #a371f7;
+    --success: #3fb950;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.popup-container {
+  padding: 16px;
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.popup-logo {
+  font-size: 24px;
+}
+
+.popup-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.popup-version {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  padding: 2px 6px;
+  border-radius: 8px;
+}
+
+.popup-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 16px;
+}
+
+.popup-feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+
+.popup-feature:hover {
+  background: var(--bg-secondary);
+}
+
+.popup-feature-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.popup-feature-icon {
+  font-size: 16px;
+}
+
+.popup-feature-label {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Toggle Switch */
+.popup-switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.popup-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.popup-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--border);
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.popup-slider:before {
+  position: absolute;
+  content: '';
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.popup-switch input:checked + .popup-slider {
+  background: var(--accent);
+}
+
+.popup-switch input:checked + .popup-slider:before {
+  transform: translateX(16px);
+}
+
+/* Buttons */
+.popup-actions {
+  margin-bottom: 16px;
+}
+
+.popup-btn {
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.popup-btn:hover {
+  background: var(--bg-secondary);
+}
+
+.popup-btn-primary {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.popup-btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+/* Donate Section */
+.popup-donate {
+  padding: 12px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.popup-donate-text {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.popup-donate-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.popup-donate-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  background: #ff4d4d;
+  color: white;
+  transition: opacity 0.15s;
+}
+
+.popup-donate-btn:hover {
+  opacity: 0.9;
+}
+
+.popup-donate-btn-gh {
+  background: #6e40c9;
+}

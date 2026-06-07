@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="settingsTitle">GitBoost 设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="options-container">
+    <div class="options-header">
+      <h1>⚡ GitBoost <span data-i18n="settingsTitle">设置</span></h1>
+    </div>
+
+    <div class="options-card">
+      <h2 class="options-card-title">🔧 <span data-i18n="settingsTitle">功能设置</span></h2>
+
+      <div class="options-item">
+        <div class="options-item-info">
+          <div class="options-item-label">
+            <span class="options-item-icon">📑</span>
+            <span data-i18n="enableToc">启用 README 目录</span>
+          </div>
+          <div class="options-item-desc">在仓库 README 页面右侧自动生成长文目录导航</div>
+        </div>
+        <label class="options-switch">
+          <input type="checkbox" id="enableToc" checked>
+          <span class="options-slider"></span>
+        </label>
+      </div>
+
+      <div class="options-item">
+        <div class="options-item-info">
+          <div class="options-item-label">
+            <span class="options-item-icon">📊</span>
+            <span data-i18n="enableInsights">启用仓库洞察面板</span>
+          </div>
+          <div class="options-item-desc">在仓库侧边栏显示 Stars 趋势、活跃度、Issues 数等数据</div>
+        </div>
+        <label class="options-switch">
+          <input type="checkbox" id="enableInsights" checked>
+          <span class="options-slider"></span>
+        </label>
+      </div>
+
+      <div class="options-item">
+        <div class="options-item-info">
+          <div class="options-item-label">
+            <span class="options-item-icon">⌨️</span>
+            <span data-i18n="enableShortcuts">启用快捷键导航</span>
+          </div>
+          <div class="options-item-desc">按 <kbd>G</kbd> 键快速导航到 Issues、PR、Wiki 等页面</div>
+        </div>
+        <label class="options-switch">
+          <input type="checkbox" id="enableShortcuts" checked>
+          <span class="options-slider"></span>
+        </label>
+      </div>
+
+      <div class="options-actions">
+        <button class="options-btn" id="saveBtn">💾 保存设置</button>
+        <span id="saveStatus" class="options-save-status"></span>
+      </div>
+    </div>
+
+    <div class="options-card">
+      <h2 class="options-card-title">❤️ <span data-i18n="donate">支持我们</span></h2>
+      <p class="options-donate-text" data-i18n="donateText">
+        如果你喜欢 GitBoost，欢迎赞助支持我们持续开发！
+      </p>
+      <div class="options-donate-buttons">
+        <a href="https://afdian.com/a/your-username" target="_blank" class="options-donate-btn options-donate-btn-afd">
+          ❤️ <span data-i18n="aifadian">爱发电赞助</span>
+        </a>
+        <a href="https://github.com/sponsors/your-github-username" target="_blank" class="options-donate-btn options-donate-btn-gh">
+          💖 <span data-i18n="githubSponsor">GitHub Sponsors</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="options-footer">
+      GitBoost v1.0.0 | Made with ❤️ for developers
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

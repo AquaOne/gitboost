@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitBoost - GitHub 增强助手</title>
+  <meta name="description" content="为 GitHub 添加 README 目录导航、仓库洞察面板、快捷键等强大功能，提升你的代码浏览体验。">
+  <link rel="icon" href="https://raw.githubusercontent.com/your-github-username/gitboost/main/icons/icon48.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: #f6f8fa;
+      color: #1f2328;
+      line-height: 1.6;
+    }
+    .hero {
+      background: linear-gradient(135deg, #6e40c9 0%, #3b1f8e 100%);
+      color: white;
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 48px; margin-bottom: 16px; }
+    .hero p { font-size: 18px; opacity: 0.9; max-width: 600px; margin: 0 auto 32px; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    .hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: 12px 32px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: white;
+      color: #6e40c9;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+    .btn-secondary:hover { border-color: white; transform: translateY(-2px); }
+    .section { padding: 64px 24px; max-width: 960px; margin: 0 auto; }
+    .section h2 { font-size: 32px; text-align: center; margin-bottom: 48px; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      background: white;
+      border: 1px solid #d0d7de;
+      border-radius: 12px;
+      padding: 32px;
+      transition: all 0.2s;
+    }
+    .feature-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      transform: translateY(-4px);
+    }
+    .feature-icon { font-size: 36px; margin-bottom: 16px; }
+    .feature-card h3 { font-size: 20px; margin-bottom: 8px; }
+    .feature-card p { color: #656d76; font-size: 14px; }
+    .install-section {
+      background: white;
+      border-top: 1px solid #d0d7de;
+      text-align: center;
+    }
+    .install-steps {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .install-step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+    .install-step-num {
+      background: #6e40c9;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .install-step p { margin-top: 4px; color: #656d76; }
+    .donate-section {
+      background: linear-gradient(135deg, #ff4d4d 0%, #6e40c9 100%);
+      color: white;
+      text-align: center;
+    }
+    .donate-section h2 { color: white; }
+    .donate-section p { opacity: 0.9; margin-bottom: 32px; }
+    .donate-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .donate-btn {
+      padding: 12px 32px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      color: white;
+    }
+    .donate-btn-afd { background: #ff4d4d; }
+    .donate-btn-gh { background: #6e40c9; }
+    .donate-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: #656d76;
+      font-size: 14px;
+    }
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 32px; }
+      .hero p { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-badge">🚀 免费开源 · 提升 GitHub 浏览体验</div>
+    <h1>⚡ GitBoost</h1>
+    <p>为 GitHub 注入强大功能 — README 自动目录、仓库洞察面板、快捷键导航，让代码浏览效率翻倍</p>
+    <div class="hero-buttons">
+      <a href="https://chrome.google.com/webstore/detail/your-extension-id" class="btn btn-primary">
+        🔧 添加到 Chrome
+      </a>
+      <a href="https://github.com/your-github-username/gitboost" class="btn btn-secondary">
+        📂 GitHub 仓库
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>✨ 核心功能</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📑</div>
+        <h3>README 智能目录</h3>
+        <p>长文档自动生成可折叠目录，支持多级标题嵌套。滚动时高亮当前章节，再长的 README 也能轻松导航。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>仓库洞察面板</h3>
+        <p>侧边栏一目了然：Stars 趋势、活跃度、Issue/PR 数量、最近提交时间。不用点开每个页面就能了解仓库状态。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⌨️</div>
+        <h3>快捷键导航</h3>
+        <p>按 <kbd>G</kbd> 键弹出快速导航菜单，一键跳转到 Issues、PRs、Wiki、Actions 等页面。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌙</div>
+        <h3>深色模式适配</h3>
+        <p>完美适配 GitHub 的深色/浅色模式，无论你怎么设置，GitBoost 都能无缝融合。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <h3>中英文双语</h3>
+        <p>完整支持中文和英文界面，设置页面、弹窗、提示信息全双语覆盖。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>隐私安全</h3>
+        <p>仅使用 GitHub 公开 API，不收集任何个人数据，不追踪浏览行为，完全开源可审计。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section install-section">
+    <h2>🚀 安装指南</h2>
+    <div class="install-steps">
+      <div class="install-step">
+        <div class="install-step-num">1</div>
+        <div>
+          <strong>方法一：Chrome Web Store</strong>
+          <p>访问 Chrome Web Store 页面，点击"添加到 Chrome"。<br>
+          <a href="https://chrome.google.com/webstore/detail/your-extension-id">https://chrome.google.com/webstore/detail/...</a></p>
+        </div>
+      </div>
+      <div class="install-step">
+        <div class="install-step-num">2</div>
+        <div>
+          <strong>方法二：开发者模式加载</strong>
+          <p>下载源码 → 打开 chrome://extensions → 开启"开发者模式" → 点击"加载已解压的扩展程序" → 选择 GitBoost 文件夹</p>
+        </div>
+      </div>
+      <div class="install-step">
+        <div class="install-step-num">3</div>
+        <div>
+          <strong>开始使用</strong>
+          <p>访问任意 GitHub 仓库页面，就能看到 GitBoost 的功能了！目录自动出现在 README 右侧，洞察面板在仓库侧边栏。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section donate-section">
+    <h2>❤️ 支持 GitBoost</h2>
+    <p>GitBoost 是免费开源项目。如果它帮你提升了效率，欢迎赞助支持我们的持续开发！</p>
+    <div class="donate-buttons">
+      <a href="https://afdian.com/a/your-username" class="donate-btn donate-btn-afd">❤️ 爱发电赞助</a>
+      <a href="https://github.com/sponsors/your-github-username" class="donate-btn donate-btn-gh">💖 GitHub Sponsors</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>GitBoost v1.0.0 · Made with ❤️ · <a href="https://github.com/your-github-username/gitboost">GitHub</a> · <a href="privacy.html">隐私政策</a></p>
+  </footer>
+</body>
+</html>

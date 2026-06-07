@@ -1,0 +1,82 @@
+{
+  "extName": {
+    "message": "GitBoost - GitHub Enhancement Suite",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Add README table of contents, repo insights panel, keyboard shortcuts and more to GitHub.",
+    "description": "Extension description"
+  },
+  "cmdOpenIssues": {
+    "message": "Open Issues page",
+    "description": "Keyboard shortcut: open issues page"
+  },
+  "repoInsights": {
+    "message": "Repo Insights",
+    "description": "Panel title for repo insights"
+  },
+  "readmeToc": {
+    "message": "Table of Contents",
+    "description": "Table of contents section"
+  },
+  "starsTrend": {
+    "message": "Stars Trend",
+    "description": "Stars trend label"
+  },
+  "recentActivity": {
+    "message": "Recent Activity",
+    "description": "Recent activity label"
+  },
+  "lastCommit": {
+    "message": "Last Commit",
+    "description": "Last commit label"
+  },
+  "openIssues": {
+    "message": "Open Issues",
+    "description": "Open issues count"
+  },
+  "openPRs": {
+    "message": "Open PRs",
+    "description": "Open pull requests count"
+  },
+  "settingsTitle": {
+    "message": "GitBoost Settings",
+    "description": "Settings page title"
+  },
+  "enableToc": {
+    "message": "Enable README Table of Contents",
+    "description": "Enable TOC feature"
+  },
+  "enableInsights": {
+    "message": "Enable Repository Insights Panel",
+    "description": "Enable insights panel"
+  },
+  "enableShortcuts": {
+    "message": "Enable Keyboard Shortcuts",
+    "description": "Enable keyboard shortcuts"
+  },
+  "donate": {
+    "message": "Support Us",
+    "description": "Donate button"
+  },
+  "donateText": {
+    "message": "Like GitBoost? Consider supporting our development!",
+    "description": "Donation prompt"
+  },
+  "aifadian": {
+    "message": "Aifadian Sponsorship",
+    "description": "Aifadian donation"
+  },
+  "githubSponsor": {
+    "message": "GitHub Sponsors",
+    "description": "GitHub Sponsors"
+  },
+  "version": {
+    "message": "Version",
+    "description": "Version label"
+  },
+  "tocToggle": {
+    "message": "TOC",
+    "description": "Toggle table of contents"
+  }
+}

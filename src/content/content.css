@@ -1,0 +1,224 @@
+/* GitBoost - Content Styles */
+
+/* ===== README TOC ===== */
+.gitboost-toc {
+  position: sticky;
+  top: 80px;
+  float: right;
+  width: 260px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  margin-left: 24px;
+  margin-bottom: 24px;
+  padding: 12px 16px;
+  background: var(--color-canvas-default, #fff);
+  border: 1px solid var(--color-border-default, #d0d7de);
+  border-radius: 8px;
+  font-size: 13px;
+  z-index: 50;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transition: all 0.2s ease;
+}
+
+.gitboost-toc:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.gitboost-toc-collapsed {
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gitboost-toc-collapsed .gitboost-toc-header {
+  padding: 0;
+}
+
+.gitboost-toc-collapsed .gitboost-toc-list,
+.gitboost-toc-collapsed .gitboost-toc-title {
+  display: none;
+}
+
+.gitboost-toc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-muted, #d8dee4);
+}
+
+.gitboost-toc-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-fg-default, #1f2328);
+}
+
+.gitboost-toc-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--color-fg-muted, #656d76);
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.gitboost-toc-toggle:hover {
+  background: var(--color-neutral-muted, #d8dee4);
+  color: var(--color-fg-default, #1f2328);
+}
+
+.gitboost-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gitboost-toc-sublist {
+  list-style: none;
+  padding-left: 14px;
+  margin: 0;
+}
+
+.gitboost-toc-item {
+  margin: 2px 0;
+  line-height: 1.5;
+}
+
+.gitboost-toc-item a {
+  color: var(--color-fg-muted, #656d76);
+  text-decoration: none;
+  display: block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.gitboost-toc-item a:hover {
+  color: var(--color-accent-fg, #0969da);
+  background: var(--color-accent-subtle, #ddf4ff);
+}
+
+.gitboost-toc-active {
+  color: var(--color-accent-fg, #0969da) !important;
+  background: var(--color-accent-subtle, #ddf4ff) !important;
+  font-weight: 500;
+}
+
+.gitboost-toc-level-2 { font-size: 13px; }
+.gitboost-toc-level-3 { font-size: 12px; }
+.gitboost-toc-level-4 { font-size: 11px; }
+
+/* ===== INSIGHTS PANEL ===== */
+.gitboost-insights {
+  margin-bottom: 16px;
+  padding: 16px;
+  background: var(--color-canvas-default, #fff);
+  border: 1px solid var(--color-border-default, #d0d7de);
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.gitboost-insights-header {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-muted, #d8dee4);
+}
+
+.gitboost-insights-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-fg-default, #1f2328);
+}
+
+.gitboost-insights-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gitboost-insights-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gitboost-insights-label {
+  color: var(--color-fg-muted, #656d76);
+  font-size: 12px;
+}
+
+.gitboost-insights-value {
+  color: var(--color-fg-default, #1f2328);
+  font-weight: 500;
+  font-size: 13px;
+}
+
+/* ===== QUICK MENU ===== */
+.gitboost-quick-menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-canvas-overlay, #fff);
+  border: 1px solid var(--color-border-default, #d0d7de);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  z-index: 9999;
+  padding: 16px;
+  min-width: 240px;
+}
+
+.gitboost-quick-menu-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-fg-muted, #656d76);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-muted, #d8dee4);
+}
+
+.gitboost-quick-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gitboost-quick-menu-items button {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  text-align: left;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--color-fg-default, #1f2328);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.gitboost-quick-menu-items button:hover {
+  background: var(--color-neutral-muted, #d8dee4);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1012px) {
+  .gitboost-toc {
+    float: none;
+    width: 100%;
+    position: relative;
+    top: 0;
+    max-height: none;
+    margin-left: 0;
+  }
+}
